@@ -33,7 +33,7 @@ const AddProduct = () => {
       formData.append("image", image); // <-- Corrected key here
 
       const uploadResponse = await axios.post(
-        "http://localhost:3100/add-product",
+        "https://lookup-cn6m.onrender.com/add-product",
         formData
       );
       
@@ -46,7 +46,7 @@ const AddProduct = () => {
 
         // Add Product
         const productResponse = await axios.post(
-          "http://localhost:3100/addproduct",
+          "https://lookup-cn6m.onrender.com/addproduct",
           product,
           {
             headers: {
