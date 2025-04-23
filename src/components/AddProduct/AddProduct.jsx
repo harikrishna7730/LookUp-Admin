@@ -6,7 +6,6 @@ import axios from "axios";
 const AddProduct = () => {
   const [image, setImage] = useState(null);
   const [productDetails, setProductDetails] = useState({
-    id:"",
     name: "",
     category: "",
     new_price: "",
@@ -31,7 +30,6 @@ const AddProduct = () => {
   
     const formData = new FormData();
       formData.append("image", image);
-      formData.append("id", newId);
       formData.append("name", productDetails.name);
       formData.append("category", productDetails.category);
       formData.append("new_price", productDetails.new_price);
@@ -57,7 +55,6 @@ const AddProduct = () => {
         alert("Product Added Successfully!");
         // Reset form
         setProductDetails({
-          id:"",
           name: "",
           category: "",
           new_price: "",
